@@ -1,5 +1,6 @@
 ﻿using Domain;
 using Entities;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,24 @@ namespace Mappers
         public static IdentityToken ToDomain(this IdentityTokenEntity identity)
         {
             return new IdentityToken
+            {
+                Password = identity.Password,
+                Email = identity.Email
+            };
+        }
+
+        public static IdentityToken ToDomain(this IdentityTokenModel identity)
+        {
+            return new IdentityToken
+            {
+                Password = identity.Password,
+                Email = identity.Email
+            };
+        }
+
+        public static IdentityTokenModel ToModel(this IdentityToken identity)
+        {
+            return new IdentityTokenModel
             {
                 Password = identity.Password,
                 Email = identity.Email

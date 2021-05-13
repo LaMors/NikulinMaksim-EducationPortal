@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sevices.Abstract
 {
-    public interface IIdentityServices
+    public interface IIdentityService
     {
         IdentityToken Registration(string password, string email);
 

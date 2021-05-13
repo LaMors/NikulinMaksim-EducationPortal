@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Data.Abstract
 {
-    public class UsersRepository : IUserRepository
+    public class UsersRepository : IUsersRepository
     {
         public UsersRepository()
         {

@@ -4,7 +4,7 @@ using System;
 
 namespace Data
 {
-    public interface IUserRepository
+    public interface IUsersRepository
     {
         void AddOrUpdate(UserEntity userEntity);
 

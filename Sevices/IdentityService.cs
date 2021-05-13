@@ -4,11 +4,11 @@ using System;
 
 namespace Sevices
 {
-    public class IdentityServices : IIdentityServices
+    public class IdentityService : IIdentityService
     {
-        private IUsersRepositorySevice usersRepository;
+        private IUsersRepositoryService usersRepository;
 
-        public IdentityServices(IUsersRepositorySevice usersRepository)
+        public IdentityService(IUsersRepositoryService usersRepository)
         {
             this.usersRepository = usersRepository;
         }
@@ -18,12 +18,12 @@ namespace Sevices
             return usersRepository.GetUserByIdentity(identity);
         }
 
-        public IdentityToken Registration(string password, string email)
+        public IdentityToken Registration(string email, string password)
         {
             return new IdentityToken
             {
-                Password = password,
-                Email = email
+                Email = email,
+                Password = password
             };
         }
     }

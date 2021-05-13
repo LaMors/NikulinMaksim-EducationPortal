@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sevices.Abstract
 {
-    public interface IUsersRepositorySevice
+    public interface IUsersRepositoryService
     {
         void AddOrUpdate(User user);
 

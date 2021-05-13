@@ -7,11 +7,11 @@ using System;
 
 namespace Sevices
 {
-    public class UsersRepositorySevice : IUsersRepositorySevice
+    public class UsersRepositoryService : IUsersRepositoryService
     {
-        private IUserRepository repository;
+        private IUsersRepository repository;
 
-        public UsersRepositorySevice(IUserRepository repository)
+        public UsersRepositoryService(IUsersRepository repository)
         {
             this.repository = repository;
         }
