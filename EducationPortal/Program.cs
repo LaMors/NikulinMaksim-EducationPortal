@@ -1,4 +1,9 @@
-﻿using System;
+﻿using API;
+using ConsoleView;
+using Data.Abstract;
+using Domain;
+using Sevices;
+using System;
 
 namespace EducationPortal
 {
@@ -6,7 +11,11 @@ namespace EducationPortal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var UsersRepositorySevice = new UsersRepositoryService(new UsersRepository());
+            var identityService = new IdentityService(UsersRepositorySevice);
+            var identityController = new IdentityController(identityService, UsersRepositorySevice);
+            new UserPanel(identityController).ViewUserPanel();
+
         }
     }
 }
